@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HireHive</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cursor.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-links">
+        <button class="nav-item active" data-section="home"><strong>Home</strong></button>
+        <button class="nav-item" data-section="about"><strong>About</strong></button>
+        <button class="nav-item" data-section="contact"><strong>Contact</strong></button>
+      </div>
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for enterprises...">
+        <button onclick="searchAds()"><i class="fas fa-search"></i></button>
+      </div>
+      <!-- Theme Toggle -->
+      <div class="theme-toggle">
+        <button id="theme-toggle-btn" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="logo">
+          <img src="assets/images/logo.png" alt="HireHive Logo">
+        </div>
+        <h1>Welcome to HireHive!</h1>
+        <p>Get started by creating a new account or signing in.</p>
+        <div class="auth-buttons">
+          <button id="create-account-btn" class="auth-btn">Sign Up</button>
+          <button id="sign-in-btn" class="auth-btn">Sign In</button>
+        </div> 
+      </div>
+      
+      <!-- hedhi lpart te3 ads-->
+      <div class="ads-sidebar">
+        <h2>Enterprise Ads</h2>
+        
+        <div class="ad-card default-visible" onclick="window.open('https://about.google/', '_blank')"> <!--n7otou class b naw3 card bch kol wahda tabda wahdha -->
+          <img src="assets/images/google.gif" alt="Google" class="ad-image">
+          <h3>Google Workspace</h3>
+          <p> Boost productivity and collaboration with <strong>Google Workspace</strong>—the ultimate suite of cloud-powered tools for businesses.
+             From Gmail and Drive to Docs, Meet, and Calendar, our seamless, AI-enhanced apps help teams work faster and smarter, from anywhere.
+              With enterprise-grade security, real-time collaboration, and easy scalability, Google Workspace empowers your business to thrive. 
+              Join the future of work—try Google Workspace today</p>
+          <p class="time">3 hours ago</p>
+        </div>
+
+        <div class="ad-card default-visible" onclick="window.open('https://www.amazon.com/')">
+          <img src="assets/images/amz.gif" alt="amazon" class="ad-image">
+          <h3>Amazon</h3>
+          <h4> Fast, Fun & Full of Wins</h4>
+          <p>Work here? Great pay, cool perks, and the joy of shipping smiles. Shop or sell here? Lightning delivery + happy customers.
+             Basically, we’re the <strong>"WOW, that was easy!"</strong> people.
+            Join us—let’s make magic (and maybe mischief) happen</p>
+          <p class="time">7 days ago </p>
+        </div>
+
+        <div class="ad-card" onclick="window.open('https://www.nvidia.com/en-me/')">
+          <img src="assets/images/nvidia.gif" alt="Nvidia" class="ad-image">
+          <h3>NVIDIA</h3>
+          <h4>Love GPUs, AI, or bending reality with code?</h4>
+          <P> At NVIDIA, we’re the mad scientists behind the tech that powers games, self-driving cars, and the metaverse. 
+            Join our crew of geniuses, enjoy killer perks, and build the future at 120 FPS. 
+            Your dream job is rendering now—hit apply before the robots beat you to it! </P>
+          <P class="time">2 days ago</P>
+        </div>
+        
+        <div class="ad-card " onclick="window.open('https://www.rockstargames.com/')">
+          <img src="assets/images/RT.gif" alt="Entreprise 3" class="ad-image">
+          <h3>  RockStar</h3>
+          <h4>Wanna Craft Games That Define Generations?</h4>
+
+            <p>At <strong>Rockstar Games</strong>, we don’t just make hits—we create cultural earthquakes. Join the rebels, storytellers, and tech wizards behind Grand Theft Auto, Red Dead, and worlds yet unimagined. 
+              Flex your genius in a no-rules creative playground where open-worlds, cutting-edge tech, and pure chaos collide.
+
+              Perks? Insane projects, legendary team vibes, and the pride of saying "I built that" when players lose their minds.</p>
+          <p class="time">5 hours ago</p>
+        </div>
+        <div class="ad-card " onclick="window.open('https://www.rockstargames.com/')">
+          <img src="assets/images/xbox.gif" alt="Entreprise 3" class="ad-image">
+          <h3>  Xbox </h3>
+          <h4> Ready to Level Up Your Career? Join Xbox!</h4>
+
+            <p>At <strong>xbox</strong>, we don’t just push buttons—we push polygons to their limits.
+               Be part of the team that crafts mind-blowing, high-octane gaming experiences for millions.
+               Whether you're engineering next-gen tech, designing immersive worlds, or optimizing performance, your work will define the future of play—and maybe even cause a few rage quits.</p><br>
+               P.S. That insane GIF above? Yeah, that's Call of Duty—and no, we won't tell you what's coming next... unless you join us.<br>
+          <p class="time">9 hours ago</p>
+        </div>
+
+        <div class="ad-card " onclick="window.open('https://www.atb.tn/', '_blank')">
+          <img src="assets/images/ATB.jpg" alt="Entreprise 3" class="ad-image">
+          <h3> ARAB TUNISIEN BANK</h3>
+          <h4>ATB – Where Your Growth is Our Mission!</h4>
+
+            <p>Whether you're a client seeking smart banking solutions or a professional looking for a rewarding career, <strong>Arab Tunisian Bank (ATB) </strong>delivers excellence.
+               Enjoy cutting-edge digital services, tailored financial products, and unwavering support for your personal and business ambitions.
+                For talented minds, ATB offers a dynamic work environment with training opportunities, career advancement, and a chance to shape Tunisia’s financial future.<br>
+            
+            Bank with a leader. Grow with ATB!</p>
+          <p class="time">5 hours ago</p>
+        </div>
+        <div class="ad-card" onclick="window.open('https://www.marvel.com/')">
+          <img src="assets/images/marvel.gif" alt="smart" class="ad-image">
+          <h3>Marvel Studios </h3>
+          <h4>Join Marvel Studios – Where Heroes Are Made!</h4>
+
+           <p> Join the team behind Earth's Mightiest Movies and help create the next cultural phenomenon. 
+            Whether you're crafting mind-blowing VFX, writing epic one-liners, or engineering next-gen film tech, your work will be seen by millions of fans worldwide. 
+            Enjoy superhero-worthy benefits, collaborate with legendary creators, and score bragging rights for life. </p> <br>
+          <p class="time">3 days ago </p>
+        </div>
+        <div class="ad-card" onclick="window.open('https://smart.com.tn/fr/login', '_blank')">
+          <img src="assets/images/smart.jpg" alt="smart" class="ad-image">
+          <h3>Smart Tunisie</h3>
+          <h4>Smart Tunisie – Powering Tunisia’s Digital Future!</h4>
+
+           <p> For customers, Smart Tunisie delivers cutting-edge telecom solutions, ultra-fast internet, and innovative digital services to keep you connected and ahead in a fast-moving world. Enjoy seamless connectivity, competitive packages, and reliable support for homes and businesses alike.
+            For talented professionals, Smart Tunisie is where tech meets opportunity. Join a forward-thinking team driving Tunisia’s digital transformation, with a culture of innovation, skill development, and career growth in a rapidly evolving industry. 
+            Connect smarter. Grow faster. Be part of Smart Tunisie! </p>
+          <p class="time">3 days ago </p>
+        </div>
+        
+        <div class="see-all-ads" id="see-all-ads">See all ads</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Role Selection Section -->
+  <section id="role-selection" class="role-selection" style="display: none;">
+    <h1>Join HireHive Today!</h1>
+    <p>Choose your role to get started.</p>
+    <div class="role-buttons">
+      <button class="role-btn" data-role="enterprise" name="entreprise">
+        <h2>Enterprise</h2>
+        <p>I'm an Enterprise looking to hire or advertise.</p>
+      </button>
+      <button class="role-btn" data-role="job-seeker" name="jobseeker">
+        <h2>Job Seeker</h2>
+        <p>I'm a Job Seeker looking for opportunities.</p>
+      </button>
+    </div>
+    <button id="next-btn" disabled>Next</button>
+  </section>
+
+  <!-- Forms Section -->
+  <section id="forms" class="forms">
+    <!-- Sign In Form -->
+    <form id="sign-in-form" action="login.php" method="POST" class="form-container needs-validation" novalidate style="display: none;">
+      <h2>Sign In</h2>
+      <div class="form-group">
+        <label for="signin-email">Email Address</label>
+        <input type="email" id="signin-email" name="email" placeholder="Enter your email" required>
+        <div class="invalid-feedback">Please enter a valid email address.</div>
+      </div>
+      <div class="form-group">
+        <label for="signin-password">Password</label>
+        <input type="password" id="signin-password" name="password" placeholder="Enter your password" required>
+        <div class="invalid-feedback">Please enter your password.</div>
+      </div>
+      <button type="submit" class="btn-submit">Sign In</button>
+    </form>
+
+    <!-- Enterprise Form -->
+    <div class="form-wrapper" id="enterprise-form-wrapper">
+      <form id="enterprise-form" action="register.php" method="POST" class="form-container needs-validation" novalidate style="display: none;">
+        <h2>Enterprise Registration</h2>
+        <p><em>We're sorry about the length of this form, but we're trying to be professional! ˶ᵔ ᵕ ᵔ˶ Please bear with us and continue.</em></p>
+        
+        <!-- Step 1: Basic Information -->
+        <h3>Step 1: Basic Information ♡</h3>
+        <div class="form-group">
+          <label for="company-name">Company Name</label>
+          <input type="text" id="company-name" name="cn" placeholder="Enter your company name" required>
+          <div class="invalid-feedback">Please enter your company name.</div>
+        </div>
+        <div class="form-group">
+          <label for="company-size">Company Size</label>
+          <select id="company-size" name="cs" required>
+            <option value="" disabled selected>Select company size</option>
+            <option value="1-10">1-10 employees</option>
+            <option value="10-50">10-50 employees</option>
+            <option value="50-100">50-100 employees</option>
+            <option value="100+">100+ employees</option>
+          </select>
+          <div class="invalid-feedback">Please select a company size.</div>
+        </div>
+        <div class="form-group">
+          <label for="worker-type">Type of Worker Needed</label>
+          <select id="worker-type" name="worker_type" required multiple>
+            <option value="developer">Developers</option>
+            <option value="designer">Designers</option>
+            <option value="marketing">Marketing Specialists</option>
+            <option value="finance">Finance/Accounting</option>
+            <option value="hr">HR/Recruitment</option>
+            <option value="content">Content Writers</option>
+            <option value="other">Other (Specify Below)</option>
+          </select>
+          <div class="invalid-feedback">Please select at least one worker type.</div>
+        </div>
+
+        <div class="form-group" id="other-worker-container" style="display: none;">
+          <label for="other-worker">Specify Worker Type</label>
+          <input type="text" id="other-worker" name="other_worker" placeholder="e.g. Data Scientist, AI Specialist">
+        </div>
+
+        <div class="form-group">
+          <label for="product-service-description">Tell us about your product or service</label>
+          <textarea id="product-service-description" rows="5"name="descrip" placeholder="Describe what your company offers (products, services, etc.)" required></textarea>
+          <div class="invalid-feedback">Please describe your product or service.</div>
+        </div>
+        
+        <div class="form-group">
+      <label for="phone">Phone Number</label>
+       <input type="tel" id="phone" name="tel_e" 
+         placeholder="e.g. 123-456-7890"
+         maxlength="14"  
+         required>
+      <div class="validation-message">The number must contain 8 to 10 digits</div>
+      </div>
+        
+        <div class="form-group">
+       <label for="email">Email Address</label>
+         <input type="email" id="email" name="email_e" 
+         placeholder="exemple@domaine.com"
+         required
+         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+         <div class="validation-message">Enter a valid email address (eg: name@domain.com)</div>
+            </div>
+        <!-- Step 2: Additional Information -->
+        <h3>Step 2: Additional Information</h3>
+        <div class="form-group">
+          <label for="linkedin">LinkedIn URL</label>
+          <input type="url" id="linkedin" name="linkedin" 
+                 placeholder="https://www.linkedin.com/in/votrenom"
+                 pattern="https?://(www\.)?linkedin\.com/(in|company)/[a-zA-Z0-9-]+">
+          
+        </div>
+
+        <div class="form-group">
+          <label for="website">Website URL (Optional)</label>
+          <input type="url" id="website" name="website" placeholder="Enter your website URL">
+          <div class="invalid-feedback">Please enter a valid website URL.</div>
+        </div>
+
+        <!-- Step 3: Security Information -->
+        <h3>Step 3: Security Information</h3>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" name="password_e" id="password" placeholder="Enter your password" required>
+          <div class="invalid-feedback">Please enter a password.</div>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+          <div class="invalid-feedback">Passwords do not match.</div>
+        </div>
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
+
+      <!-- Enterprise Second Form -->
+      <div id="enterprise-second-form" class="form-container" style="display: none;">
+        <h2>Do you want us to create ads for you?</h2>
+        <div class="form-group">
+          <button id="yes-ads-btn" class="btn-submit">Yes</button>
+          <button id="no-ads-btn" class="btn-secondary">No</button>
+        </div>
+      </div>
+
+      <!-- Enterprise Ads Form -->
+      <div id="enterprise-ads-form" class="form-container" style="display: none;">
+        <h2>Please send us the following information:</h2>
+        <p>Send us an email with the following details:</p>
+        <ul>
+          <li>Company Logo (PNG format)</li>
+          <li>Company Name</li>
+          <li>Type of Service</li>
+          <li>Product Pictures</li>
+          <li>Any other relevant information</li>
+        </ul>
+        <p>Email: <a href="mailto:ads@hirehive.com">ads@hirehive.com</a></p>
+        <button id="submit-ads-info" class="btn-submit">Submit</button>
+      </div>
+      
+      <!-- Final Messages -->
+      <div id="enterprise-final-message-ads" class="form-container final-message" style="display: none;">
+        <h2>Thank you!</h2>
+        <p>Your information has been submitted. We'll contact you with worker suggestions and ads.</p>
+      </div>
+      <div id="enterprise-final-message-no-ads" class="form-container final-message" style="display: none;">
+        <h2>Thank you!</h2>
+        <p>Your information has been submitted.</p>
+      </div>
+    </div>
+
+    <!-- Job Seeker Form -->
+<form method="POST" action="register.php" id="job-seeker-form" class="form-container needs-validation" novalidate style="display: none;" enctype="multipart/form-data">
+  <h2>Job Seeker Registration</h2>
+  <p><em>We know this form is long, but hey, we're just trying to find you the perfect job! Keep going!</em></p>
+  
+  <!-- Step 1: Personal Information -->
+  <h3>Step 1: Personal Information</h3>
+  <div class="form-group">
+    <label for="full-name">Full Name</label>
+    <input type="text" name="nom" id="full-name" placeholder="Enter your full name" required>
+    <div class="invalid-feedback">Please enter your full name.</div>
+  </div>
+  
+  <div class="form-group">
+    <label for="worker-type-j">Profession/Job Title</label>
+    <select id="worker-type-j" name="worker_type_j" required multiple>
+      <option value="developer">Developers</option>
+      <option value="designer">Designers</option>
+      <option value="marketing">Marketing Specialists</option>
+      <option value="finance">Finance/Accounting</option>
+      <option value="hr">HR/Recruitment</option>
+      <option value="content">Content Writers</option>
+      <option value="other">Other (Specify Below)</option>
+    </select>
+    <div class="invalid-feedback">Please select at least one profession.</div>
+  </div>
+  
+  <div class="form-group" id="other-worker-container-j" style="display: none;">
+    <label for="other-worker-j">Specify your profession</label>
+    <input type="text" id="other-worker-j" name="other_worker_j" placeholder="e.g. Data Scientist, AI Specialist">
+  </div>
+  
+  <div class="form-group">
+    <label for="education">Educational Level</label>
+    <select id="education" name="education" required>
+      <option value="" disabled selected>Select educational level</option>
+      <option value="High School">High School</option>
+      <option value="Bachelor">Bachelor</option>
+      <option value="Master">Master</option>
+      <option value="PhD">PhD</option>
+    </select>
+    <div class="invalid-feedback">Please select your educational level.</div>
+  </div>
+
+  <!-- Step 2: Skills and Portfolio -->
+  <h3>Step 2: Skills and Portfolio</h3>
+  <div class="form-group">
+    <label for="skills">Skills (comma separated)</label>
+    <input type="text" name="skills" id="skills" placeholder="Enter your skills" required>
+    <div class="invalid-feedback">Please enter your skills.</div>
+  </div>
+  
+  <div class="form-group">
+    <label for="portfolio">Upload Portfolio/Certificates</label>
+    <input type="file" id="portfolio" name="cv" accept=".pdf,.doc,.docx,.jpg,.png">
+    <div class="invalid-feedback">Please upload your portfolio or certificates.</div>
+  </div>
+
+  <!-- Step 3: Contact Information -->
+  <h3>Step 3: Contact Information</h3>
+  <div class="form-group">
+    <label for="job-seeker-email">Email Address</label>
+    <input type="email" name="email_j" id="job-seeker-email" 
+           placeholder="exemple@domaine.com"
+           required
+           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+    <div class="validation-message">Please enter a valid email address (ex: name@domain.com)</div>
+  </div>
+  
+  <div class="form-group">
+    <label for="job-seeker-phone">Phone Number</label>
+    <input type="tel" name="tel_j" id="job-seeker-phone" 
+           placeholder="e.g. 123-456-7890"
+           maxlength="14"
+           required>
+    <div class="validation-message">Phone number must contain 8 to 10 digits</div>
+  </div>
+
+  <!-- Step 4: Security Information -->
+  <h3>Step 4: Security Information</h3>
+  <div class="form-group">
+    <label for="job-seeker-password">Password</label>
+    <input type="password" name="password_j" id="job-seeker-password" placeholder="Enter your password" required>
+    <div class="invalid-feedback">Please enter a password.</div>
+  </div>
+  
+  <div class="form-group">
+    <label for="job-seeker-confirm-password">Confirm Password</label>
+    <input type="password" id="job-seeker-confirm-password" placeholder="Confirm your password" required>
+    <div class="invalid-feedback">Passwords do not match.</div>
+  </div>
+  
+  <button type="submit" class="btn-submit">Submit</button>
+</form>
+      
+      <div id="job-seeker-final-message" class="form-container final-message" style="display: none;">
+        <h2>Thank you!</h2>
+        <p>Your information has been successfully submitted. We will contact you shortly with job opportunities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about py-5">
+    <div class="container">
+      <h1 class="text-center mb-5">About <span class="highlight">HireHive</span></h1>
+      <div class="about-intro text-center mb-5">
+        <p class="lead">Connecting talent with opportunity in the digital age</p>
+        <p>HireHive is revolutionizing the way businesses and professionals connect, creating a seamless ecosystem for hiring, collaboration, and growth.</p>
+      </div>
+
+      <div class="features-section mb-5">
+        <h2 class="text-center mb-4">Why Choose HireHive?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3>Fast Matching</h3>
+            <p>Our advanced algorithm connects you with the perfect candidates or opportunities in minutes, not days.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Verified Profiles</h3>
+            <p>Every user undergoes rigorous verification to ensure authenticity and quality.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3>Global Reach</h3>
+            <p>Access talent and opportunities from around the world with our international platform.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-section mb-5">
+        <h2 class="text-center mb-4">HireHive By The Numbers</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number" data-count="1000">0</div>
+            <div class="stat-label">Active Users</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="95">0</div>
+            <div class="stat-label">Success Rate</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="4">0</div>
+            <div class="stat-label">Countries</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-count="24">0</div>
+            <div class="stat-label">Support Hours</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-section mb-5">
+        <h2 class="text-center mb-4">Meet Our Team</h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-image">
+              <img src="../assets/images/team1_new.png" alt="Alexander Reed">
+            </div>
+            <h3>Alexander Reed</h3>
+            <p class="team-role">CEO & Founder</p>
+            <p class="team-bio">Visionary leader with 10+ years in HR technology.</p>
+          </div>
+          <div class="team-card">
+            <div class="team-image">
+              <img src="../assets/images/team2_new.png" alt="Elena Martinez">
+            </div>
+            <h3>Elena Martinez</h3>
+            <p class="team-role">CTO</p>
+            <p class="team-bio">Tech expert specializing in AI-driven matching algorithms.</p>
+          </div>
+          <div class="team-card">
+            <div class="team-image">
+              <img src="../assets/images/team3_new.png" alt="James Chen">
+            </div>
+            <h3>James Chen</h3>
+            <p class="team-role">Head of Design</p>
+            <p class="team-bio">Creative force behind HireHive's user experience.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mission-section">
+        <div class="mission-content">
+          <h2><strong>Our Mission</strong></h2>
+          <p>To democratize access to opportunity by removing barriers in the hiring process. We believe talent should be recognized regardless of background, location, or traditional credentials.</p>
+          
+          <h2><strong>Our Vision</strong></h2>
+          <p>Creating a world where finding the right job or the perfect candidate is effortless, transparent, and rewarding for everyone involved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h1>Contact Us</h1>
+    <div class="form-wrapper">
+      <form action="contact.php" method="POST" id="contact-form" class="form-container">
+        <div class="form-group">
+          <label for="contact-name">Name</label>
+          <input type="text" name="contact-name" id="contact-name" placeholder="Enter your name" required>
+          <div class="invalid-feedback">Please enter your name.</div>
+        </div>
+        <div class="form-group">
+          <label for="contact-email">Email Address</label>
+          <input type="email" name="email-contact" id="contact-email" placeholder="Enter your email" required>
+          <div class="invalid-feedback">Please enter a valid email address.</div>
+        </div>
+        <div class="form-group">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="contact-message" rows="5" placeholder="Enter your message" required></textarea>
+          <div class="invalid-feedback">Please enter your message.</div>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
+      </form>
+      
+      <!-- Final Message -->
+      <div id="contact-final-message" class="form-container final-message" style="display: none;">
+        <h2>Thank you!</h2>
+        <p>Your message has been sent successfully</p>
+      </div>
+    </div>
+    <p>Or you can reach out to us at <a href="mailto:info@hirehive.com">info@hirehive.com</a>.</p>
+  </section>
+
+  <!-- Payment Modal -->
+<div id="payment-modal" class="modal">
+  <div class="modal-content">
+    <div class="payment-header">
+      <h2 id="payment-modal-title">Membership</h2>
+      <p id="payment-modal-subtitle">Choose your plan to access premium features</p>
+      <span class="close-modal">&times;</span>
+    </div>
+    
+    <div class="wizard-steps">
+      <div class="step active" id="step-1">1. Select Plan</div>
+      <div class="step" id="step-2">2. Payment</div>
+    </div>
+    
+    <!-- Step 1: Plan Selection -->
+    <div class="wizard-step active" id="plan-selection-step">
+      <h3>Select Your Plan</h3>
+      <div class="plan-cards" id="plan-cards-container">
+        <!-- Free Trial Plan -->
+        <div class="plan-card selected" data-plan="free-trial">
+          <div class="plan-top">
+            <div class="plan-name">Free Trial</div>
+            <div class="plan-price">$0</div>
+            <div class="plan-period">7 days</div>
+          </div>
+          <ul class="plan-benefits">
+            <li>Basic access</li>
+            <li>Limited support</li>
+          </ul>
+        </div>
+        
+        <!-- Starter Plan -->
+        <div class="plan-card" data-plan="starter">
+          <div class="plan-top">
+            <div class="plan-name">Starter</div>
+            <div class="plan-price">$9.99</div>
+            <div class="plan-period">per month</div>
+          </div>
+          <ul class="plan-benefits">
+            <li>Premium access</li>
+            <li>Email support</li>
+            <li>Job matching</li>
+          </ul>
+        </div>
+        
+        <!-- Pro Plan -->
+        <div class="plan-card" data-plan="pro">
+          <div class="plan-top">
+            <div class="plan-name">Pro</div>
+            <div class="plan-price">$19.99</div>
+            <div class="plan-period">per month</div>
+          </div>
+          <ul class="plan-benefits">
+            <li>Full access</li>
+            <li>Priority support</li>
+            <li>Direct company contact</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="wizard-buttons">
+  <button class="btn-secondary btn-cancel" onclick="closePaymentModal()">Cancel</button>
+  <button class="btn-primary" id="continue-to-payment">Continue to Payment</button>
+</div>
+    </div>
+    
+    <!-- Step 2: Payment Details -->
+    <div class="wizard-step" id="payment-details-step" data-payment-form="true">
+	<div class="form-group">
+          <label for="country">Country</label>
+          <select id="country" name="country" required>
+            <option value="" disabled selected>Select your country</option>
+            <option value="US">United States</option>
+            <option value="GB">United Kingdom</option>
+            <option value="CA">Canada</option>
+            <option value="AU">Australia</option>
+            <option value="DE">Germany</option>
+            <option value="FR">France</option>
+            <option value="TN">Tunisia</option>
+          </select>
+        </div>
+        
+        <div class="location-warning" id="location-warning" style="display: none;">
+          PayPal is not available in your country. Please use Visa or another payment method.
+        </div>
+        
+        <h3>Payment Method</h3>
+        <div class="payment-methods">
+          <div class="payment-method active" data-method="visa">
+            <img src="assets/images/visa.png" alt="Visa">
+            <span>Visa</span>
+          </div>
+          <div class="payment-method" data-method="paypal">
+            <img src="assets/images/paypal.png" alt="PayPal">
+            <span>PayPal</span>
+          </div>
+        </div>
+      <div class="payment-form-container">
+	  <div class="form-group">
+  <label for="card-number">Card Number</label>
+  <input type="text" name="card-number" id="card-number" placeholder="1234 5678 9012 3456" required>
+  <div class="validation-message">Please enter a valid card number (13-19 digits)</div>
+  </div>
+
+<div class="form-group">
+  <label for="card-name">Cardholder Name</label>
+  <input type="text" name="card-name" id="card-name" placeholder="John Doe" required>
+  <div class="validation-message">Please enter the name as it appears on your card</div>
+</div>
+
+<div class="form-row">
+  <div class="form-group">
+    <label for="expiry-date">Expiry Date</label>
+    <input type="text" name="expiry-date" id="expiry-date" placeholder="MM/YY" required>
+    <div class="validation-message">Please enter a valid expiry date (MM/YY)</div>
+  </div>
+  <div class="form-group">
+    <label for="cvv">CVV</label>
+    <input type="text" name="cvv" id="cvv" placeholder="123" required>
+    <div class="validation-message">Please enter a valid CVV (3-4 digits)</div>
+  </div>
+</div>
+ </div>	  
+<div class="wizard-buttons">
+  <button class="btn-secondary" id="back-to-plans">Back</button>
+  <button class="btn-primary" id="complete-payment">Complete Payment</button>
+</div>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; HireHive. All rights reserved.</p>
+      <p>Coded by Alexander Reed, Elena Martinez, James Chen</p>
+    </div>
+  </footer>
+
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/navigation.js"></script>
+  <!-- Back to top button -->
+<button class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+</body>
+</html>

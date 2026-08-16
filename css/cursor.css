@@ -1,0 +1,75 @@
+/* ========== CURSOR STYLES ========== */
+/* Base cursor removal */
+body {
+  cursor: none;
+}
+
+/* Main cursor ring */
+.custom-cursor {
+  --cursor-size: 20px;
+  --cursor-border: 2px solid var(--color-accent); /* Use theme accent color */
+  --cursor-scale: 1.5;
+  --cursor-hover-bg: rgba(114, 137, 218, 0.1);
+
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  border: var(--cursor-border);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: 
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+  will-change: transform;
+}
+
+/* Cursor hover state */
+.custom-cursor.hover {
+  transform: 
+    translate(-50%, -50%) 
+    scale(var(--cursor-scale));
+  background-color: var(--cursor-hover-bg);
+}
+
+/* Dark mode cursor color */
+.dark-mode .custom-cursor {
+  border-color: var(--color-text-dark);
+}
+
+/* Cursor dot */
+.custom-cursor-dot {
+  --dot-size: 4px;
+  --dot-color: var(--color-primary); /* Use theme primary color */
+
+  width: var(--dot-size);
+  height: var(--dot-size);
+  background-color: var(--dot-color);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
+  will-change: transform;
+}
+
+/* Dark mode dot color */
+.dark-mode .custom-cursor-dot {
+  --dot-color: var(--color-primary-dark);
+}
+
+/* Hide cursor on touch devices */
+@media (hover: none) {
+  body {
+    cursor: auto;
+  }
+  
+  .custom-cursor,
+  .custom-cursor-dot {
+    display: none;
+  }
+}
+

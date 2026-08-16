@@ -1,0 +1,192 @@
+/* ========== FORM CONTAINER ========== */
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== FORM GROUPS ========== */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--color-text);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-primary);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ========== FORM BUTTONS ========== */
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-button);
+  color: var(--color-primary);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: var(--color-accent);
+}
+
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-secondary:hover {
+  background-color: #999;
+}
+
+/* ========== FORM UTILITIES ========== */
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group select {
+  flex: 0 0 120px;
+}
+
+.invalid-feedback {
+  color: #ff6b6b;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.was-validated .form-control:invalid ~ .invalid-feedback,
+.was-validated .form-control:invalid ~ .invalid-feedback {
+  display: block;
+}
+
+ul {
+  text-align: left;
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+/* ========== MULTIPLE SELECT ========== */
+select[multiple] {
+  height: auto;
+  min-height: 100px;
+}
+
+select[multiple] option {
+  padding: 8px;
+  margin: 2px 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+select[multiple] option:hover {
+  background-color: var(--color-accent);
+}
+
+/* ========== PRODUCT/SERVICE DESCRIPTION ========== */
+#product-service-description {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+  min-height: 120px;
+}
+
+#product-service-description:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* Phone number validation styles */
+.is-valid {
+  border-color: #28a745 !important;
+  background-color: rgba(40, 167, 69, 0.1) !important;
+}
+
+.is-invalid {
+  border-color: #dc3545 !important;
+  background-color: rgba(220, 53, 69, 0.1) !important;
+}
+
+/* Phone input specific styles */
+input[type="tel"] {
+  transition: all 0.3s ease;
+}
+
+/* Styles de validation pour Job Seeker */
+#job-seeker-phone.valid,
+#job-seeker-email.valid {
+  border-color: #28a745;
+  background-color: rgba(40, 167, 69, 0.1);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2328a745"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+  padding-right: 35px;
+}
+
+#job-seeker-phone.invalid,
+#job-seeker-email.invalid {
+  border-color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23dc3545"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+  padding-right: 35px;
+}
+
+#job-seeker-phone.invalid + .validation-message,
+#job-seeker-email.invalid + .validation-message {
+  display: block;
+  color: #dc3545;
+}
