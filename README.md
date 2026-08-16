@@ -33,9 +33,8 @@ HireHive is a modern, dynamic job portal designed to bridge the gap between tale
 
 HireHive is built and maintained by a dedicated team of professionals:
 
-*   **Alexander Reed** – CEO & Founder
-*   **Elena Martinez** – Chief Technology Officer (CTO)
-*   **James Chen** – Head of Design
+*   **vairous1x** – CEO & Founder
+
 
 ## 📄 License
 
